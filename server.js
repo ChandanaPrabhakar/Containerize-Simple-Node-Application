@@ -1,7 +1,7 @@
 import express, { json } from "express";
 import { config } from 'dotenv';
 import connectDB from './src/config/db.js';
-// import userRoutes from '';
+import students from './src/routes/studentRoutes.js';
 
 config();
 connectDB();
@@ -9,7 +9,7 @@ connectDB();
 const app = express();
 
 app.use(json());
-// app.use('/', userRoutes);
+app.use('/', students);
 
 
 const PORT = process.env.PORT || 8080;
