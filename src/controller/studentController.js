@@ -38,7 +38,8 @@ export const getStudentById = async (req, res) =>{
 
 export const updateStudentById = async (req, res) =>{
     try{
-        const student = await Students.findByIdAndUpdate(req.params, req.body, {new: true});
+
+        const student = await Students.findByIdAndUpdate(req.params.id, req.body, {new: true});
         if(!student) return res.status(404).json({message: 'Student not found'});
         res.status(200).json(student);
     }catch(error){
