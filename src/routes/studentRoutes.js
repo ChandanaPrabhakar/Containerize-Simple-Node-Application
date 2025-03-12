@@ -5,7 +5,7 @@ const router = express.Router();
 
 //Create a student data.
 
-router.post('/', async (req, res) =>{
+router.post('/students', async (req, res) =>{
     try{
         const student = await Students.create(req.body);
         res.status(200).json(student);
@@ -16,7 +16,7 @@ router.post('/', async (req, res) =>{
 
 //Get all the student data.
 
-router.get('/students', async (req, res) =>{
+router.get('/', async (req, res) =>{
     try{
         const students =  await Students.find();
         res.status(200).json(students);
