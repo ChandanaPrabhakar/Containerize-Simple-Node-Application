@@ -4,14 +4,14 @@ import { createStudentData,
     getStudentById,
     updateStudentById,
     deleteStudentById
- } from '../controller/studentController';
+ } from '../controller/studentController.js';
 
 const router = express.Router();
 
 router.post('/students', createStudentData);
 router.get('/', getStudentsData);
-router.get('/:id', getStudentById);
-router.put('/:id', updateStudentById);
-router.delete('/:id', deleteStudentById);
+router.get('/student/:id', getStudentById);
+router.put('/student/:id', updateStudentById);
+router.delete('/student/:id', deleteStudentById);
 
 export default router;
