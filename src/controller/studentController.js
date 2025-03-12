@@ -1,5 +1,4 @@
-import express from 'express';
-import Students from '../model/studentModel';
+import Students from '../models/studentModel.js';
 
 //Create a student data.
 
